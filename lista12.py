@@ -1,26 +1,33 @@
+import random    
+
 def D(x,n):
   conta = 0 
-  i = 1
-  conta = conta+1
-  while i > 5:
-    x[i] = x[i] +2 
+  i = 1                     
+  conta = conta+1   
+            
+  while i < n:
+    x[i] =  x[i] +2 
     i = i + 2
     conta = conta+5
-    
+  
   i = 1
   conta = conta+1
   while i <= n/2:
     x[i] = x[i] + x[i+1] 
     i = i+1
-    conta = conta+6
+    conta = conta+7
 
   print conta
         
 
-A = [5,2,4,6,1,3]
-B = [1,2,3,4,5,6,7,8,9,10]
+B = random.sample(xrange(100), 10)
+C = random.sample(xrange(100), 100)
+E = random.sample(xrange(1000), 1000)
 
-D(B,9)
+
+D(B,10)
 print("-----")
-D(A,5)
+D(C,100)
 print("-----")
+D(E,1000)
+
